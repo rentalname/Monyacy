@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="net.liberr.monyacy.MainActivityFragment"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/eventTitle"
+        android:layout_width="343dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:inputType="text|textMultiLine"
+        android:text="イベントタイトル"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="68dp"
+        app:layout_constraintHorizontal_bias="0.52" />
+
+    <TextClock
+        android:id="@+id/eventTime"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/eventTitle"
+        tools:layout_editor_absoluteX="21dp" />
+
+    <Spinner
+        android:id="@+id/fixLocale"
+        android:layout_width="223dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintLeft_toRightOf="@+id/eventTime"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventTitle" />
+
+    <CalendarView
+        android:id="@+id/eventDate"
+        android:layout_width="355dp"
+        android:layout_height="300dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventTime"
+        app:layout_constraintHorizontal_bias="0.538" />
+</android.support.constraint.ConstraintLayout>
